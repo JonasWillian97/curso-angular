@@ -4,3 +4,11 @@ h2{
     margin-top: 10px;
     font-size: 28px;
 }
+
+p{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(218, 38, 235);
+    text-align: center;
+    margin-top: 10px;
+}
