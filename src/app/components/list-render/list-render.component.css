@@ -19,6 +19,7 @@ button{
     background-color: crimson;
     color: aliceblue;
     padding: 10px;
+    margin-right: 12px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
