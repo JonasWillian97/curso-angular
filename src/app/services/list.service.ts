@@ -14,9 +14,8 @@ export class ListService {
 
    }
 
-  remove(animals: Animal[], animal: Animal){
-    console.log("Ativando o service...");
-    return animals.filter((a) => animal.name != a.name);
+  remove(id: number){
+    return this.http.delete<Animal>(`${this.url}/${id}`);
   }
 
   getAll():Observable<Animal[]>{
