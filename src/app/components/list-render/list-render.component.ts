@@ -11,13 +11,13 @@ export class ListRenderComponent {
 
   animalDetails = "";
 
-  animals: Animal[] = [
-    { name: "Fred", type: "Bird", age: 8 },
-    { name: "Thor", type: "Dog", age: 2},
-    {name: "Tchula", type: "Horse", age: 4}
-  ]
+  animals: Animal[] = []
 
   constructor(private listService: ListService) {
+  }
+  
+  ngOnInit(){
+    this.getAnimals();
 
   }
 
@@ -30,4 +30,7 @@ export class ListRenderComponent {
     this.animals = this.listService.remove(this.animals, animal);
   }
 
+  getAnimals(){
+    this.listService.getAll().subscribe(retorno => this.animals = retorno)
+  }
 }
